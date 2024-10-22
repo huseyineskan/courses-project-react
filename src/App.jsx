@@ -1,9 +1,12 @@
 import "./App.css";
+import MainContent from "./components/MainContent";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <h1>My courses project</h1>
+      <Header />
+      <MainContent />
     </>
   );
 }

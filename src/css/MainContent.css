@@ -1,0 +1,122 @@
+.main-content {
+  margin-top: 30px;
+}
+
+.main-content .container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+}
+
+.course-box {
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 300ms ease;
+}
+
+.course-box:hover {
+  cursor: pointer;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: box-shadow 300ms ease;
+}
+
+.course-infos {
+  padding: 15px 10px;
+  color: #333333;
+}
+
+.course-infos > *:not(:first-child) {
+  margin-top: 15px;
+}
+
+.title-price-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-price-div h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.title-price-div span {
+  font-size: 25px;
+  color: #a5a5a5;
+  letter-spacing: -1px;
+}
+
+.course-img {
+  min-height: 240px;
+  height: 240px;
+}
+.course-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+}
+
+.course-link {
+  display: block;
+  text-decoration: none;
+  border-radius: 13px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid transparent;
+  background-color: #dadada;
+  padding: 8px;
+  color: #333333;
+  text-transform: capitalize;
+  transition: all 250ms ease;
+  font-weight: bold;
+}
+
+.course-link:hover {
+  background-image: linear-gradient(#1abc9c, #16a085);
+  color: #ffffff;
+  transition: all 250ms ease;
+  border-color: #ffffff;
+}
+
+.course-category {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 5px 10px;
+  border-radius: 20px 0 0 20px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.youtube {
+  background-image: linear-gradient(#e74c3c, #c0392b);
+}
+
+.udemy {
+  background-image: linear-gradient(#1abc9c, #16a085);
+}
+
+@media screen and (max-width: 998px) {
+  .main-content .container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-content .container {
+    grid-template-columns: auto;
+  }
+}
