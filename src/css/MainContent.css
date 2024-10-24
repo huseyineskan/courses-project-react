@@ -1,10 +1,13 @@
 .main-content {
   margin-top: 30px;
+  overflow: hidden;
+  position: relative;
 }
 
 .main-content .container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 31.3%);
+  justify-content: space-between;
   gap: 30px;
 }
 
@@ -13,7 +16,9 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  opacity: 0;
   transition: box-shadow 300ms ease;
+  animation: fadeAnimation 1s ease forwards;
 }
 
 .course-box:hover {
@@ -111,12 +116,18 @@
 
 @media screen and (max-width: 998px) {
   .main-content .container {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 48%);
   }
 }
 
 @media screen and (max-width: 768px) {
   .main-content .container {
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+
+@keyframes fadeAnimation {
+  100% {
+    opacity: 1;
   }
 }

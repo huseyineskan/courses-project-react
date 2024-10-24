@@ -1,13 +1,17 @@
-import React from "react";
 import Course from "../components/Course";
 import { courses } from "../data/data";
 import "../css/MainContent.css";
 
-function MainContent() {
+function MainContent({ selectedCategory }) {
+  const filteredCourses =
+    selectedCategory === "all"
+      ? courses
+      : courses.filter((c) => c.category === selectedCategory);
+
   return (
     <section className="main-content">
       <div className="container">
-        {courses?.map((course) => (
+        {filteredCourses?.map((course) => (
           <Course key={course.id} course={course} />
         ))}
       </div>

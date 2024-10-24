@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Header.css";
 
-function Header() {
+function Header({ setSelectedCategory }) {
   return (
     <header>
       <div className="container">
@@ -11,13 +11,34 @@ function Header() {
         <nav>
           <ul>
             <li>
-              <a href="#">All Courses</a>
+              <a
+                href="#"
+                onClick={() => {
+                  setSelectedCategory("all");
+                }}
+              >
+                All Courses
+              </a>
             </li>
             <li>
-              <a href="#">Udemy</a>
+              <a
+                href="#"
+                onClick={() => {
+                  setSelectedCategory("udemy");
+                }}
+              >
+                Udemy
+              </a>
             </li>
             <li>
-              <a href="#">Youtube</a>
+              <a
+                href="#"
+                onClick={() => {
+                  setSelectedCategory("youtube");
+                }}
+              >
+                Youtube
+              </a>
             </li>
           </ul>
         </nav>
