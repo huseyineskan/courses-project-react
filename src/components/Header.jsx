@@ -1,5 +1,15 @@
 import React from "react";
 import "../css/Header.css";
+import { courses } from "../data/data";
+
+function uniqueCategories(obj) {
+  const seenCategories = new Set();
+  return obj.filter((course) => {
+    const isDuplicate = seenCategories.has(course.category); // Kategori daha önce görülmüş mü?
+    seenCategories.add(course.category); // Kategori eklenir
+    return !isDuplicate; // Aynı kategori tekrar edilmez
+  });
+}
 
 function Header({ setSelectedCategory }) {
   return (
@@ -20,26 +30,19 @@ function Header({ setSelectedCategory }) {
                 All Courses
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                onClick={() => {
-                  setSelectedCategory("udemy");
-                }}
-              >
-                Udemy
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                onClick={() => {
-                  setSelectedCategory("youtube");
-                }}
-              >
-                Youtube
-              </a>
-            </li>
+            {uniqueCategories(courses)?.map((course) => (
+              <li>
+                <a
+                  href="#"
+                  onClick={() => {
+                    setSelectedCategory(course.category);
+                  }}
+                >
+                  {course.category.charAt(0).toUpperCase() +
+                    course.category.slice(1)}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

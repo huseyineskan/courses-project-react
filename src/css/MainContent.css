@@ -1,7 +1,5 @@
 .main-content {
   margin-top: 30px;
-  overflow: hidden;
-  position: relative;
 }
 
 .main-content .container {
@@ -101,6 +99,7 @@
   top: 0px;
   right: 0px;
   padding: 5px 10px;
+  background-image: linear-gradient(#8f8f8f, #3a3a3a);
   border-radius: 20px 0 0 20px;
   color: #fff;
   text-transform: capitalize;
@@ -112,6 +111,10 @@
 
 .udemy {
   background-image: linear-gradient(#1abc9c, #16a085);
+}
+
+.coursera {
+  background-image: linear-gradient(#1656a0, #1c43ec);
 }
 
 @media screen and (max-width: 998px) {

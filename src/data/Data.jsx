@@ -49,4 +49,14 @@ export const courses = [
     img: "../src/img/2.png",
     link: "https://youtube.com",
   },
+  {
+    id: 6,
+    category: "coursera",
+    title: "coursera 1",
+    description:
+      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    price: 70,
+    img: "../src/img/2.png",
+    link: "https://youtube.com",
+  },
 ];
